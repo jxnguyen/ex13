@@ -6,3 +6,10 @@ class TestSuite {
 
 	}
 }
+
+class HanoiLoesungVerallgemeinert {
+
+	static void loese (Tower t) {
+		
+	}
+}
