@@ -6,8 +6,8 @@ class TestSuite {
 	public static void main(String[] args) {
 		try {
 			System.out.println("Input for this program is expected on two lines:");
-			System.out.println("\t1) The number of discs for the problem.");
-			System.out.println("\t2) A series of space separated numbers in ascending order, signifying the start tower.");
+			System.out.println("1) The number of discs for the problem.");
+			System.out.println("2) A series of space separated numbers in ascending order, signifying the start tower.");
 			// read input
 			Scanner scan = new Scanner(System.in);
 			// to store discs
