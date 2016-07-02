@@ -90,6 +90,37 @@ public class Tower {
 		return moves;
 	}
 
+	// TOP | Return the top disc of specified tower
+	//
+	public final int top(char tower) throws TurmException {
+
+		Stack<Integer> startTower = towers.get(tower);
+
+		if (!("abc".contains(""+tower))) {
+			throw new TurmException("tower must be 'a', 'b' or 'c'.");
+		}
+		else if (startTower.empty()) {
+			throw new TurmException("tower is empty.");
+		}
+		else {
+			return startTower.peek();
+		}
+	}
+
+	// IS EMPTY | Return true if specified tower is empty, else false
+	//
+	public final boolean isEmpty(char tower) throws TurmException {
+
+		Stack<Integer> startTower = towers.get(tower);
+
+		if (!("abc".contains(""+tower))) {
+			throw new TurmException("tower must be 'a', 'b' or 'c'.");
+		}
+		else {
+			return startTower.empty();
+		}
+	}
+
 	// TO STRING | Return string representation of self.
 	//
 	public String toString() {
