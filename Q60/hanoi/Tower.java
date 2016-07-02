@@ -20,10 +20,11 @@ public class Tower {
 		towers.put('c', new Stack<Integer>());
 	}
 
-	// MOVE | Move the top disc from start tower to end tower, with following
-	// 				conditions: 1) start, end are 'a,b,c' & start != end. 2) start
-	// 				is not empty. 3) top disc on start is <= top disc on end, or
-	// 				end is empty. Returns number representing moved disc.
+	// MOVE | Move the top disc from start tower to end tower,
+	// with following conditions: 1) start, end are 'a,b,c' &
+	// start != end. 2) start is not empty. 3) top disc on start
+	// is <= top disc on end, or end is empty. Returns number
+	// representing moved disc.
 	//
 	public final int move(char start, char end) throws TurmException {
 
