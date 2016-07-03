@@ -9,6 +9,12 @@ public class LinkedList <T> implements Iterable<Node<T>> {
   Node<T> head;
 	int length;
 
+	// CONSTRUCTOR
+	//
+	public LinkedList() {
+		head = null;
+		length = 0;
+	}
 	// CONSTRUCTOR | Linked list from array.
 	//
 	public LinkedList(T[] array) {
@@ -103,14 +109,16 @@ public class LinkedList <T> implements Iterable<Node<T>> {
 
 		Iterator<Node<T>> iter = new Iterator<Node<T>>() {
 
-			private Node<T> currentNode = head;
+			private Node<T> currentNode;
+			private int index = 0;
 
 			public boolean hasNext() {
-				return (currentNode.next != null);
+				return index < length;
 			}
 
 			public Node<T> next() {
-				currentNode = currentNode.next;
+				currentNode = (currentNode == null ? head : currentNode.next);
+				index++;
 				return currentNode;
 			}
 		};
