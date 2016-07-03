@@ -59,7 +59,7 @@ public class LinkedList <T> implements Iterable<Node<T>> {
 		// if k is head
 		if (head == k) return delete();
 		// traverse list
-		for (Node<T> n = head; n != null; n = n.next) {
+		for (Node<T> n : this) {
 			// if next node is k
 			if (n.next == k) {
 				// exclude k
@@ -67,7 +67,6 @@ public class LinkedList <T> implements Iterable<Node<T>> {
 				length--;
 				return true;
 			}
-		}
 		// k not in list
 		return false;
 	}
@@ -76,18 +75,15 @@ public class LinkedList <T> implements Iterable<Node<T>> {
 	//
 	public boolean isElem(Node<T> k) {
 		// traverse list
-		for (Node<T> n = head; n != null; n = n.next)
-			if (n == k) return true;
-
+		for (Node<T> n : this) if (n == k) return true;
 		return false;
 	}
 
 	// NODE FOR VALUE | Return first node with value i, else null.
 	//
 	public Node<T> nodeForValue(T v) {
-		for (Node<T> n = head; n != null; n = n.next)
-			if (n.value == v) return n;
-
+		// traverse list
+		for (Node<T> n : this) if (n.value == v) return n;
 		return null;
 	}
 
@@ -95,7 +91,7 @@ public class LinkedList <T> implements Iterable<Node<T>> {
 	//
 	public String toString() {
 		String s = "";
-		for (Node<T> n = head; n != null; n = n.next)
+		for (Node<T> n : this)
 			s += n.value + " -> ";
 
 		s += "null";
