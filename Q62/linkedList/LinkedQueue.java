@@ -65,27 +65,32 @@ public class LinkedQueue<T> extends LinkedList<T> {
 	//
 	public void append(T v) {
 		// if list empty
-		if (length == 0) insert(v);
+		if (isEmpty()) insert(v);
 		else {
 			// insert after tail & update tail
 			Node<T> node = new Node<T>(v);
 			tail.next = node;
 			tail = node;
+			length++;
 		}
 	}
 
 	// APPEND | Append linked list to end of list
 	//
 	public void append(LinkedQueue<T> l) {
+		// if given list is empty, do nothing
+		if (l.isEmpty()) return;
 		// if list empty, take over list
-		if (length == 0) {
+		if (isEmpty()) {
 			head = l.head;
 			tail = l.tail;
+			length = l.length;
 		}
 		else {
 			// concatenate & update tail
 			tail.next = l.head;
 			tail = l.tail;
+			length += l.length;
 		}
 	}
 }

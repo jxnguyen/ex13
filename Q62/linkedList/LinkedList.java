@@ -94,6 +94,12 @@ public class LinkedList <T> implements Iterable<Node<T>> {
 		return null;
 	}
 
+	// IS EMPTY | Return true if list is empty, else false.
+	//
+	public boolean isEmpty() {
+		return length == 0;
+	}
+
 	// TO STRING | Return String representation of list.
 	//
 	public String toString() {
