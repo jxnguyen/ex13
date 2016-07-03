@@ -67,6 +67,7 @@ public class LinkedList <T> implements Iterable<Node<T>> {
 				length--;
 				return true;
 			}
+		}
 		// k not in list
 		return false;
 	}
@@ -91,9 +92,7 @@ public class LinkedList <T> implements Iterable<Node<T>> {
 	//
 	public String toString() {
 		String s = "";
-		for (Node<T> n : this)
-			s += n.value + " -> ";
-
+		for (Node<T> n : this) s += n.value + " -> ";
 		s += "null";
 		return s;
 	}
