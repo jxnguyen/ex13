@@ -1,5 +1,7 @@
 package linkedList;
 
+// LINED QUEUE | Subclass of LinkedList, adding tail/append functionality.
+//
 public class LinkedQueue<T> extends LinkedList<T> {
 
 	Node<T> tail;
