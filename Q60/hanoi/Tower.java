@@ -11,7 +11,13 @@ public class Tower {
 	public Tower(int[] startTower) throws TurmException {
 		// init start tower
 		Stack<Integer> start = new Stack<Integer>();
-		for (int i = startTower.length-1; i >= 0; i--) start.push(startTower[i]);
+		// populate start tower stack (reversed array)
+		for (int i = startTower.length-1; i >= 0; i--) {
+			if (!start.empty() && startTower[i] > start.peek())
+				throw new TurmException("Invalid start configuration.");
+			else
+				start.push(startTower[i]);
+		}
 		discs = startTower.length;
 		// init towers
 		towers = new HashMap<Character, Stack<Integer>>(3);
