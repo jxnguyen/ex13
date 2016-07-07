@@ -10,11 +10,11 @@ class TestSuite {
 		BinaryTree<Integer> d = new BinaryTree<Integer>(5);
 		BinaryTree<Integer> e = new BinaryTree<Integer>(6);
 
-		tree.left = a;
+		tree.left  = a;
 		tree.right = b;
-		a.left = c;
-		a.right = d;
-		b.left = e;
+		a.left     = c;
+		a.right    = d;
+		b.left     = e;
 
 		System.out.println(size(tree));
 	}
